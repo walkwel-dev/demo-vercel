@@ -36,8 +36,7 @@ export async function POST() {
       taskId: task.id,
       subtaskId: subtask.id
     });
-  } catch (err: any) {
-    console.error(err);
-    return NextResponse.json({ error: err.message }, { status: 500 });
+  } catch  {
+    return NextResponse.json({ error: "error happened" }, { status: 500 });
   }
 }

@@ -91,8 +91,7 @@ export async function GET() {
       createdNext: currentActionNumber < 5
     });
 
-  } catch (err: any) {
-    console.error(err);
-    return NextResponse.json({ error: err.message }, { status: 500 });
+  } catch  {
+     return NextResponse.json({ error: "error happened" }, { status: 500 });
   }
 }
