@@ -1,6 +1,11 @@
 import supabase from '@/lib/supabase/serverClient';
 import { NextResponse } from 'next/server';
 
+export const config = {
+  schedule: '* * * * *', 
+};
+
+
 export async function GET() {
   try {
     console.log("cron runnning")
