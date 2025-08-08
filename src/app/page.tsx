@@ -13,7 +13,7 @@ export default function HomePage() {
       const res = await fetch('/api/random-data');
       const data = await res.json();
       setFact(data.fact);
-    } catch (err) {
+    } catch {
       setError('Failed to load fact');
     } finally {
       setLoading(false);
